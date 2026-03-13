@@ -1,0 +1,91 @@
+.insight-layout{
+display:grid;
+grid-template-columns:280px 1fr;
+gap:60px;
+}
+
+.insight-sidebar{
+position:sticky;
+top:120px;
+height:fit-content;
+}
+
+.insight-sidebar h4{
+margin-bottom:20px;
+font-size:16px;
+}
+
+.insight-sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.insight-sidebar li{
+cursor:pointer;
+margin-bottom:12px;
+color:#666;
+font-size:15px;
+transition:0.2s;
+}
+
+.insight-sidebar li:hover{
+color:#000;
+}
+
+.insight-content h1{
+font-size:48px;
+margin-bottom:30px;
+}
+
+.featured-image{
+width:100%;
+margin-bottom:40px;
+border-radius:6px;
+}
+
+.rich-text h2{
+font-size:30px;
+margin-top:50px;
+margin-bottom:15px;
+}
+
+.rich-text h3{
+font-size:24px;
+margin-top:40px;
+margin-bottom:10px;
+}
+
+.rich-text p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:18px;
+color:#444;
+}
+
+@media(max-width:900px){
+
+.insight-layout{
+grid-template-columns:1fr;
+}
+
+.insight-sidebar{
+display:none;
+}
+
+}
+
+.title-wrapper{
+    height: 70svh;
+       display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: flex-end;
+    padding-right: 15%;
+}
+
+.details-title{
+    width: 55%;
+    font-size: 4.2vw;
+    font-weight: 400;
+    line-height: 1.1;
+}
