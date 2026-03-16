@@ -6,6 +6,7 @@ import "./Components/Home.css";
 import Contact from "./Components/contact";
 import Insights from "./Components/insights/Insights";
 import InsightDetail from "./Components/insights/insightDetail";
+import About from "./Components/About/about";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/insight/:slug" element={<InsightDetail   />} />
+                  <Route path="/about" element={<About   />} />
           </Routes>
         </main>
       </div>
