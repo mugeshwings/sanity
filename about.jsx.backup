@@ -1,0 +1,189 @@
+import React, { useEffect, useState } from "react";
+import { client, urlFor } from "../../sanity/SainityClient";
+import "./about.css";
+
+function About() {
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+
+    const fetchData = async () => {
+
+      try {
+
+      const res = await client.fetch(`*[_type == "aboutSection"][0]{
+        heroTitle,
+        heroDescription,
+        parasection,
+        parasection2,
+
+        ceoTitle,
+        ceoPara1,
+        ceoPara2,
+        buttonText,
+        popupTitle,
+        popupPara,
+        bannerImage,
+
+        wingssectiontitle,
+        wingspara,
+
+        counters[]{
+          title,
+          number
+        },
+
+        cultureSection->{
+          cards[]{
+            title,
+            para,
+            buttonText,
+            buttonLink,
+            image
+          }
+        }
+
+      }`);
+
+        console.log("SANITY DATA:", res);
+
+        setData(res);
+
+      } catch (error) {
+
+        console.error("SANITY FETCH ERROR:", error);
+
+      } finally {
+
+        setLoading(false);
+
+      }
+
+    };
+
+    fetchData();
+
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+
+  if (!data) return <div>No data found in Sanity</div>;
+
+  return (
+    <div>
+
+      {/* HERO SECTION */}
+
+      <section className="heroabout">
+        <div className="titlewrap"><h1 className="herotitle">{data.heroTitle}</h1></div>
+        <p>{data.heroDescription}</p>
+      </section>
+
+
+      {/* PARAGRAPH SECTION */}
+
+      <section className="para-section">
+        <div className="para-block">
+        <div className="para-wrap">
+          <p className="small-para small-para1">{data.parasection}</p>
+          <p className="small-para small-para2">{data.parasection2}</p>
+          </div></div>
+      </section>
+
+
+      {/* CEO SECTION */}
+
+      <section className="ceo-section">
+       <div className="ceo-block">
+        <h2 className="ceotitle">{data.ceoTitle}</h2>
+
+        <p className="ceo-para">{data.ceoPara1}</p>
+
+        <button>{data.buttonText}</button>
+         <div className="imgwrap"> 
+        {data.bannerImage && (
+        <img className="ceo-banner"
+            src={urlFor(data.bannerImage).width(1200).url()}
+            alt="CEO Banner"
+          />
+        )}</div>
+        </div>
+      </section>
+
+
+      {/* WINGS SECTION */}
+
+        <section >
+        <div className="wings-block">
+          <div className="h2-wrap-wings"><h2 className="h2-wings">{data.wingssectiontitle}</h2></div>
+          <div className="para-wrap-wings"><p className="para-wings">{data.wingspara}</p></div>
+          </div>
+        </section>
+
+
+      {/* CULTURE CARDS */}
+
+     <section>
+    <div className="culture-block">
+  <div className="culture-cards">
+    {data?.cultureSection?.cards?.length > 0 ? (
+      data.cultureSection.cards.map((card, index) => (
+        <div className="culture-card" key={index}>
+
+          {/* TEXT CONTENT */}
+          <div className="card-content">
+            <div className="text-wrap">
+            <h3 className="card-title">{card.title}</h3>
+            <p className="card-para">{card.para}</p>
+           </div>
+            {card.buttonText && (
+            <a cz href={card.buttonLink || "#"}>
+              {card.buttonText}
+            </a>
+          )}
+          </div>
+
+          {/* IMAGE */}
+          <div className="card-image">
+            {card.image && (
+              <img
+                src={urlFor(card.image).width(800).url()}
+                alt={card.title}
+              />
+            )}
+          </div>
+
+        </div>
+      ))
+    ) : (
+      <p>No culture cards found</p>
+    )}
+  </div>
+</div>
+</section>
+
+
+      {/* COUNTER SECTION */}
+
+      <section>
+       <div className="counter-block">
+        {data.counters?.map((counter, index) => (
+
+          <div className="count-wrap" key={index}>
+            <p className="count-title">{counter.title}</p>
+            <h2 className="count-num">{counter.number}</h2>
+
+          </div>
+          
+        ))}
+          </div>
+      </section>
+
+    </div>
+  );
+
+}
+
+export default About;

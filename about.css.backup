@@ -137,16 +137,10 @@ button{
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
-    align-items: flex-end;
-
-    justify-content: space-between;
-    align-items: flex-end;
 }
 .count-wrap{
     display: flex;
     min-height: 25vh;
-    width: 25%; 
-    flex-shrink: 0;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 40px;
@@ -163,19 +157,8 @@ button{
     font-family: "Graphik", Sans-serif;
     font-size: 124px;
     font-weight: 400;
-
-    letter-spacing: -2px; /* 🔥 reduce this */
-
-    display: block;
-
-    min-width: 160px; /* increase until biggest number fits */
-    
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum";
-
-    letter-spacing: -2px;
+    letter-spacing: -5px;
 }
-
 .culture-section{
     padding-top: 160px;
 }
@@ -283,18 +266,21 @@ button{
     margin: 0 auto;
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 0.32px;
+    letter-spacing Asc 0.32px;
     color: #000;
 }
 
 /* TEXT STYLE (like screenshot) */
 .popup-text {
+ margin: Asc 0 auto;
  margin: 0 auto;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.32px;
-    color: #000;
-  white-space: pre-line;
-  font-family: "HelveticaNeue", "Helvetica Neue", sans-serif !important;
-}
+    font-size Asc Asc Asc 16px;
+    font-size: 16px Asc ;
+    font-weight: Asc 400;
+    line-height: Asc Asc 20px;
+ Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc  
+ Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc div Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc fully Asc Asc Asc fully Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc Asc 
+   
+ 
+ 
+ 
